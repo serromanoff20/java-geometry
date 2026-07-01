@@ -10,11 +10,16 @@
 
   <name>geometry-library</name>
 
-
+  <properties>
+    <maven.compiler.source>24</maven.compiler.source>
+    <maven.compiler.target>24</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
   <modules>
     <module>geometry.shapes</module>
     <module>geometry.utils</module>
+    <module>three.dimensional.shapes</module>
   </modules>
 
   <dependencies>

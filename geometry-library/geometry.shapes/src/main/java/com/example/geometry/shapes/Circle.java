@@ -5,6 +5,8 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
+import three.dimensional.shapes.Sphere;
+
 import java.lang.Math;
 
 @Mojo(name = "circle")
@@ -16,7 +18,7 @@ public class Circle extends AbstractMojo {
     private double radius;
 
     @Override
-    public void execute() throws MojoExecutionException, MojoFailureException {
+    public void execute() {
         calculateArea();
 
         calculatePerimeter();

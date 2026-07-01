@@ -1,4 +1,7 @@
 com\example\MyMojo.class
-com\example\geometry\shapes\Triangle.class
 com\example\geometry\shapes\Circle.class
 com\example\geometry\shapes\Rectangle.class
+com\example\geometry\shapes\SphereMojo.class
+com\example\geometry\shapes\TetrahedronMojo.class
+com\example\geometry\shapes\ParallelepipedMojo.class
+com\example\geometry\shapes\Triangle.class

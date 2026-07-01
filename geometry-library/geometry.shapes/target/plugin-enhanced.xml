@@ -40,6 +40,32 @@
       </configuration>
     </mojo>
     <mojo>
+      <goal>parallelepiped</goal>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <implementation>com.example.geometry.shapes.ParallelepipedMojo</implementation>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
+      <parameters>
+        <parameter>
+          <name>treeD</name>
+          <type>boolean</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+        </parameter>
+      </parameters>
+      <configuration>
+        <treeD implementation="boolean" default-value="false">${3d}</treeD>
+      </configuration>
+    </mojo>
+    <mojo>
       <goal>rectangle</goal>
       <requiresDirectInvocation>false</requiresDirectInvocation>
       <requiresProject>true</requiresProject>
@@ -72,6 +98,47 @@
         <height implementation="double" default-value="0">${h}</height>
         <width implementation="double" default-value="0">${w}</width>
       </configuration>
+    </mojo>
+    <mojo>
+      <goal>sphere</goal>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <implementation>com.example.geometry.shapes.SphereMojo</implementation>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
+      <parameters>
+        <parameter>
+          <name>treeD</name>
+          <type>boolean</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+        </parameter>
+      </parameters>
+      <configuration>
+        <treeD implementation="boolean" default-value="false">${3d}</treeD>
+      </configuration>
+    </mojo>
+    <mojo>
+      <goal>tetrahedron</goal>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <implementation>com.example.geometry.shapes.TetrahedronMojo</implementation>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
+      <parameters/>
     </mojo>
     <mojo>
       <goal>touch</goal>
@@ -158,6 +225,12 @@
       <artifactId>geometry.utils</artifactId>
       <type>jar</type>
       <version>1.1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.example</groupId>
+      <artifactId>three.dimensional.shapes</artifactId>
+      <type>jar</type>
+      <version>1.0.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </plugin>
