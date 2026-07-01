@@ -6,7 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="geometry-library" />
+        <module name="geometry.shapes" />
+        <module name="geometry.utils" />
       </profile>
     </annotationProcessing>
   </component>
