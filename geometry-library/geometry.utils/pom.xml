@@ -7,11 +7,17 @@
     <parent>
         <groupId>com.example</groupId>
         <artifactId>geometry-library</artifactId>
-        <version>1.1.0</version>
+        <version>1.2.0</version>
     </parent>
 
+    <properties>
+        <maven.compiler.source>24</maven.compiler.source>
+        <maven.compiler.target>24</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <artifactId>geometry.utils</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
 </project>

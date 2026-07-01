@@ -1,4 +1,5 @@
-package com.example.geometric.shapes;
+package com.example.geometry.shapes;
+
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
@@ -24,12 +25,12 @@ public class Rectangle extends AbstractMojo {
     private void calculateArea() {
         double s = height * width;
 
-        System.out.printf("Area of Rectangle: %f\n", s);
+        System.out.printf("Area of Rectangle: %.2f", s);
     }
 
     private void calculatePerimeter() {
         double p = 2 * (width + height);
 
-        System.out.printf("Perimeter of Rectangle: %f\n", p);
+        System.out.printf("Perimeter of Rectangle: %.2f", p);
     }
 }

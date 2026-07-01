@@ -1,4 +1,4 @@
-package com.example2;
+package com.example;
 
 /*
  * Copyright 2001-2005 The Apache Software Foundation.

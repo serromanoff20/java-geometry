@@ -1,4 +1,4 @@
-package com.example.geometric.shapes;
+package com.example.geometry.shapes;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
@@ -25,12 +25,12 @@ public class Circle extends AbstractMojo {
     private void calculateArea() {
         double s = Pi * Math.pow(radius, 2);
 
-        System.out.printf("Area of Circle: %f\n", s);
+        System.out.printf("Area of Circle: %.2f\n", s);
     }
 
     private void calculatePerimeter() {
         double p = 2 * Pi * radius;
 
-        System.out.printf("Perimeter of Circle: %f\n", p);
+        System.out.printf("Perimeter of Circle: %.2f\n", p);
     }
 }
