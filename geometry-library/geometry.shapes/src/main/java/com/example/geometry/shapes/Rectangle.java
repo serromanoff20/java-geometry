@@ -25,12 +25,12 @@ public class Rectangle extends AbstractMojo {
     private void calculateArea() {
         double s = height * width;
 
-        System.out.printf("Area of Rectangle: %.2f", s);
+        System.out.printf("Area of Rectangle: %.2f\n", s);
     }
 
     private void calculatePerimeter() {
         double p = 2 * (width + height);
 
-        System.out.printf("Perimeter of Rectangle: %.2f", p);
+        System.out.printf("Perimeter of Rectangle: %.2f\n", p);
     }
 }

@@ -1,15 +1,28 @@
 package three.dimensional.shapes;
 
+/**
+ * Класс высчитывает площадь и периметр только правильного тетраэдера
+ */
 public class Tetrahedron {
 
-    public static void calculateArea() {
+    private final int numberTriangularSide = 6;
 
-        System.out.println("Area of Tetrahedron: ...");
+    private final double baseSideFace;
+
+    public Tetrahedron(double sideA) {
+        baseSideFace = sideA;
     }
 
-    public static void calculatePerimeter() {
+    public void calculateArea() {
+        double s = Math.pow(baseSideFace, 2) * Math.sqrt(3);
 
-        System.out.println("Perimeter of Tetrahedron: ...");
+        System.out.printf("Area of Tetrahedron: %.2f\n", s);
+    }
+
+    public void calculatePerimeter() {
+        double perimeter = numberTriangularSide * baseSideFace;
+
+        System.out.printf("Perimeter of Tetrahedron: %.2f\n", perimeter);
     }
 
 }

@@ -7,13 +7,22 @@ import three.dimensional.shapes.Parallelepiped;
 
 @Mojo(name = "parallelepiped")
 public class ParallelepipedMojo extends AbstractMojo {
-    @Parameter(property = "3d", defaultValue = "false")
-    private boolean treeD;
+
+    @Parameter(property = "l", defaultValue = "0")
+    private double length;
+
+    @Parameter(property = "w", defaultValue = "0")
+    private double width;
+
+    @Parameter(property = "h", defaultValue = "0")
+    private double height;
 
     @Override
     public void execute() {
-        Parallelepiped.calculateArea();
+        Parallelepiped parallelepiped = new Parallelepiped(length, width, height);
 
-        Parallelepiped.calculatePerimeter();
+        parallelepiped.calculateArea();
+
+        parallelepiped.calculateAllLength();
     }
 }

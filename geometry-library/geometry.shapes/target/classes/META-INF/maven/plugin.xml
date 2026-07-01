@@ -54,15 +54,31 @@
       <threadSafe>false</threadSafe>
       <parameters>
         <parameter>
-          <name>treeD</name>
-          <type>boolean</type>
+          <name>height</name>
+          <type>double</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+        </parameter>
+        <parameter>
+          <name>length</name>
+          <type>double</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+        </parameter>
+        <parameter>
+          <name>width</name>
+          <type>double</type>
           <required>false</required>
           <editable>true</editable>
           <description></description>
         </parameter>
       </parameters>
       <configuration>
-        <treeD implementation="boolean" default-value="false">${3d}</treeD>
+        <height implementation="double" default-value="0">${h}</height>
+        <length implementation="double" default-value="0">${l}</length>
+        <width implementation="double" default-value="0">${w}</width>
       </configuration>
     </mojo>
     <mojo>
@@ -114,15 +130,15 @@
       <threadSafe>false</threadSafe>
       <parameters>
         <parameter>
-          <name>treeD</name>
-          <type>boolean</type>
+          <name>radius</name>
+          <type>double</type>
           <required>false</required>
           <editable>true</editable>
           <description></description>
         </parameter>
       </parameters>
       <configuration>
-        <treeD implementation="boolean" default-value="false">${3d}</treeD>
+        <radius implementation="double" default-value="0">${r}</radius>
       </configuration>
     </mojo>
     <mojo>
@@ -138,7 +154,18 @@
       <instantiationStrategy>per-lookup</instantiationStrategy>
       <executionStrategy>once-per-session</executionStrategy>
       <threadSafe>false</threadSafe>
-      <parameters/>
+      <parameters>
+        <parameter>
+          <name>sideA</name>
+          <type>double</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description>Длина ребра тетрадера</description>
+        </parameter>
+      </parameters>
+      <configuration>
+        <sideA implementation="double" default-value="0.00">${a}</sideA>
+      </configuration>
     </mojo>
     <mojo>
       <goal>touch</goal>
@@ -230,7 +257,7 @@
       <groupId>com.example</groupId>
       <artifactId>three.dimensional.shapes</artifactId>
       <type>jar</type>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.1.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </plugin>

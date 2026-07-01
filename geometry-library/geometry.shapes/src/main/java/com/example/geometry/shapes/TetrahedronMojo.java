@@ -10,10 +10,18 @@ import three.dimensional.shapes.Tetrahedron;
 @Mojo(name = "tetrahedron")
 public class TetrahedronMojo extends AbstractMojo {
 
+    /**
+     * Длина ребра тетрадера
+     */
+    @Parameter(property = "a", defaultValue = "0.00")
+    private double sideA;
+
     @Override
     public void execute() {
-        Tetrahedron.calculateArea();
+        Tetrahedron tetrahedron = new Tetrahedron(sideA);
 
-        Tetrahedron.calculatePerimeter();
+        tetrahedron.calculateArea();
+
+        tetrahedron.calculatePerimeter();
     }
 }

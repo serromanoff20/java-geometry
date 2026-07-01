@@ -8,13 +8,15 @@ import three.dimensional.shapes.Sphere;
 @Mojo(name = "sphere")
 public class SphereMojo extends AbstractMojo {
 
-    @Parameter(property = "3d", defaultValue = "false")
-    private boolean treeD;
+    @Parameter(property = "r", defaultValue = "0")
+    private double radius;
 
     @Override
     public void execute() {
-        Sphere.calculateArea();
+        Sphere sphere = new Sphere(radius);
 
-        Sphere.calculatePerimeter();
+        sphere.calculateArea();
+
+        sphere.calculateAllLength();
     }
 }

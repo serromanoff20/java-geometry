@@ -2,14 +2,23 @@ package three.dimensional.shapes;
 
 public class Sphere {
 
-    public static void calculateArea() {
+    final double Pi = 3.14;
 
-        System.out.println("Area of Sphere: ...");
+    private final double radiusSphere;
+
+    public Sphere(double radius) {
+        this.radiusSphere = radius;
     }
 
-    public static void calculatePerimeter() {
+    public void calculateArea() {
+        double s = 4 * Pi * Math.pow(this.radiusSphere, 2);
 
-        System.out.println("Perimeter of Sphere: ...");
+        System.out.printf("Area of Sphere: %.2f\n", s);
     }
 
+    public void calculateAllLength() {
+        double l = 2 * Pi * radiusSphere;
+
+        System.out.printf("Length of the equator of Sphere: %.2f\n", l);
+    }
 }

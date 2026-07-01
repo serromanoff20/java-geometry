@@ -2,14 +2,31 @@ package three.dimensional.shapes;
 
 public class Parallelepiped {
 
-    public static void calculateArea() {
+    private final double lengthParallelepiped;
 
-        System.out.println("Area of Parallelepiped: ...");
+    private final double widthParallelepiped;
+
+    private final double heightParallelepiped;
+
+    public Parallelepiped(double length, double  width, double  height) {
+        this.lengthParallelepiped = length;
+        this.widthParallelepiped = width;
+        this.heightParallelepiped = height;
     }
 
-    public static void calculatePerimeter() {
+    public void calculateArea() {
+        double s = 2 * (
+                lengthParallelepiped * widthParallelepiped +
+                widthParallelepiped * heightParallelepiped +
+                heightParallelepiped * lengthParallelepiped);
 
-        System.out.println("Perimeter of Parallelepiped: ...");
+        System.out.printf("Area of Parallelepiped: %.2f\n", s);
+    }
+
+    public void calculateAllLength() {
+        double l = 4 * (lengthParallelepiped + widthParallelepiped + heightParallelepiped);
+
+        System.out.printf("Sum lengths all sides of Parallelepiped: %.2f\n", l);
     }
 
 }
