@@ -6,6 +6,9 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 @Mojo(name = "triangle")
 public class Triangle extends AbstractMojo {
 
@@ -36,8 +39,28 @@ public class Triangle extends AbstractMojo {
     }
 
     private void calculateArea() throws MojoExecutionException, MojoFailureException {
-        double s = Math.sqrt(semiperimeter * (semiperimeter - sideA) * (semiperimeter - sideB) * (semiperimeter - sideC));
 
-        System.out.printf("Area of Triangle: %f\n", s);
+        if (checkRuleInequalitiesTriangle()) {
+            double s = Math.sqrt(semiperimeter * (semiperimeter - sideA) * (semiperimeter - sideB) * (semiperimeter - sideC));
+
+            System.out.printf("Area of Triangle: %f\n", s);
+        } else  {
+
+            throw new MojoFailureException("Triangle Rule Inequalities test failed");
+        }
+
+    }
+
+    private boolean checkRuleInequalitiesTriangle() {
+        double[] smallestSides = calculateSmallestSides();
+
+        return (smallestSides[0] + smallestSides[1]) > smallestSides[2];
+    }
+
+    private double[] calculateSmallestSides() {
+        double[] sides = {sideA, sideB, sideC};
+        Arrays.sort(sides);
+
+        return new double[]{sides[0], sides[1], sides[2]};
     }
 }
